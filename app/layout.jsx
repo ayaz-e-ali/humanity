@@ -2,6 +2,7 @@ import { Playfair_Display, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import AmbientAudio from "@/components/AmbientAudio";
+import CustomCursor from "@/components/CustomCursor";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -25,7 +26,8 @@ export default function RootLayout({ children }) {
       <body className={`${playfair.variable} ${sourceSans.variable} antialiased`}>
         <SmoothScroll />
         <AmbientAudio />
-
+        <CustomCursor />
+        
         {children}
       </body>
     </html>
